@@ -17,34 +17,55 @@
   &__list {
     display: flex;
     align-items: center;
-    margin: 0 auto;
+    margin-right: 36px;
   }
 
   &__item {
     &:not(:last-of-type) {
-      margin-right: 24px;
+      margin-right: 36px;
     }
   }
 
   &__link {
     position: relative;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.25;
     transition: color 0.3s linear;
 
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: currentcolor;
+      transform: scale(0);
+      transform-origin: left;
+      transition: transform 0.3s linear;
+    }
+
     &:hover {
-      color: var(--color-blue-600);
+      &::before {
+        transform: scale(1);
+      }
     }
 
     &.true {
-      color: var(--color-blue-600);
+      &::before {
+        transform: scale(1);
+      }
     }
   }
 
   &__btns {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 18px;
+  }
+
+  &--footer {
+    margin-bottom: 48px;
   }
 
   @include media(tablet) {

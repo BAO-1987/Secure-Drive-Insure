@@ -1,9 +1,9 @@
 const tabsContainer = document.querySelector('.tabs');
-const tabsList = tabsContainer ? .querySelector('.tabs__nav');
-const tabButtons = tabsList ? .querySelectorAll('.tabs__link');
-const tabPanels = tabsContainer ? .querySelectorAll('.tabs__panels > div');
+const tabsList = tabsContainer ?.querySelector('.tabs__nav');
+const tabButtons = tabsList ?.querySelectorAll('.tabs__link');
+const tabPanels = tabsContainer ?.querySelectorAll('.tabs__panels > div');
 
-tabButtons ? .forEach((tab, index) => {
+tabButtons ?.forEach((tab, index) => {
   tab.setAttribute('role', 'tab');
   if (index === 0) {
     tab.classList.add('selected');
@@ -13,7 +13,7 @@ tabButtons ? .forEach((tab, index) => {
   }
 });
 
-tabsContainer ? .addEventListener('click', e => {
+tabsContainer ?.addEventListener('click', e => {
   const clickedTab = e.target.closest('.tabs__link');
   const allTabs = tabsContainer.querySelectorAll('.tabs__link');
 
@@ -37,7 +37,7 @@ function switchTab(newTab) {
   // Check if activePanel is null before attempting to use removeAttribute
   if (activePanel) {
     // Hide all tab panels
-    tabPanels ? .forEach(panel => {
+    tabPanels ?.forEach(panel => {
       panel.setAttribute('hidden', true);
     });
 

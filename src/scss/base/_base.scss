@@ -72,9 +72,9 @@ body {
   min-height: var(--vh);
 }
 
-.main {
-  padding-top: var(--header-height);
-}
+// .main {
+//   padding-top: var(--header-height);
+// }
 
 .logo {
   display: flex;
@@ -82,6 +82,12 @@ body {
   justify-content: center;
   width: 100%;
   max-width: 243px;
+}
+
+.content {
+  margin: 0 auto rem(48);
+  width: fit-content;
+  text-align: center;
 }
 
 .image {

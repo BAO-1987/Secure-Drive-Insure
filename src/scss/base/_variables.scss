@@ -11,7 +11,7 @@
   // font-family
   --font-family-primary: "Poppins", sans-serif;
   --font-family-secondary: "Merriweather", sans-serif;
-
+  --font-family-third: "Oswald", sans-serif;
   // font-weight
   --fw-300: 300;
   --fw-400: 400;
@@ -23,13 +23,13 @@
 
   //
   --color-white: #fff;
-  --color-black: #121212;
+  --color-black: #000;
   --color-blue-300: #31a0fee5;
   --color-blue-600: #394264;
   --color-blue-900: #252b42;
-  --color-orange-600: #EC5C2E;
+  --color-orange-600: #ec5c2e;
 
   //  radius
-  --radius-main: 4px;
-  --radius-big: 32px;
+  --radius-main: 12px;
+  --radius-big: 20px;
 }

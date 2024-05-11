@@ -1,0 +1,47 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.story {
+  h2 {
+    margin: 0 auto 48px;
+    width: fit-content;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1090px;
+    gap: 24px;
+    margin-inline: auto;
+  }
+
+  &__desc {
+    width: 100%;
+    max-width: 644px;
+    translate: 0 4px;
+
+    p {
+      margin-bottom: 24px;
+    }
+  }
+
+  &--about {
+    .story__inner {
+      flex-direction: row-reverse;
+    }
+    .story__desc {
+      max-width: 532px;
+      translate: none;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .btn {
+    margin-left: auto;
+    padding: 18px 36px;
+  }
+}
