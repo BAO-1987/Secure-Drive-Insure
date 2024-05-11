@@ -11,9 +11,10 @@
 
     a {
       font-size: 16px;
-      transition: text-shadow 0.3s linear;
+      transition: color 0.3s linear text-shadow 0.3s linear;
 
       &:hover {
+        color: var(--color-blue-300);
         text-shadow: 0.3px 0.3px 0 currentcolor;
       }
     }
@@ -47,17 +48,25 @@
 
   @include media(tablet) {
     padding: 24px 0;
+
+    &__list {
+      gap: 16px;
+
+    }
   }
 
   @include media(mobile-l) {
-    &__inner {
-      flex-direction: column;
+    &__list {
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 24px;
+    }
 
-      p {
-        text-align: center;
-      }
+    &__copy {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 20px;
     }
   }
 }

@@ -9,9 +9,6 @@
   }
 
   &__item {
-    // display: flex;
-    // flex-direction: column;
-    // height: 100%;
     overflow: hidden;
     border-radius: calc(var(--radius-big) + 12px);
   }
@@ -19,8 +16,9 @@
   &__desc {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    overflow: hidden;
     padding: 24px;
+    height: 100%;
     color: var(--color-black);
     background-color: var(--color-white);
 
@@ -53,7 +51,6 @@
     }
 
     &__item {
-      padding: 16px;
 
       &:last-child {
         grid-column: span 2;
@@ -62,6 +59,10 @@
           aspect-ratio: 2/1;
         }
       }
+    }
+
+    &__desc {
+      padding: 16px;
     }
   }
 

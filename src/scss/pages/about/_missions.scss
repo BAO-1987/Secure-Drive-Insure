@@ -2,7 +2,7 @@
 @use "../../utils/mixins/" as *;
 
 .missions {
-  padding-bottom: 60px;
+  padding-bottom: rem(60);
 
   &__inner {
     width: 100%;
@@ -13,5 +13,9 @@
   h2 {
     margin: 0 auto 24px;
     width: fit-content;
+  }
+
+  @include media(tablet) {
+    padding-bottom: 30px;
   }
 }

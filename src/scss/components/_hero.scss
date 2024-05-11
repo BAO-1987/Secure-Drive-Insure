@@ -14,7 +14,7 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    min-height: 899px;
+    min-height: 901px;
 
     &::before {
       content: "";
@@ -30,10 +30,32 @@
     z-index: 1;
     width: 100%;
     max-width: 613px;
+    translate: 0 -6px;
+  }
+
+  &--home {
+    #{$root}__content {
+      translate: none;
+
+      h1 {
+        margin-bottom: 24px;
+        line-height: 0.89;
+      }
+    }
+  }
+
+  &--services {
+    #{$root}__content {
+      max-width: 615px;
+    }
+
+    h1 {
+      font-size: clamp(2.125rem, 0.375rem + 3.3333vi, 3.375rem);
+    }
   }
 
   h1 {
-    margin-bottom: 24px;
+    margin-bottom: 14px;
   }
 
   p {
@@ -44,43 +66,27 @@
     line-height: 1.38;
   }
 
-  &--company,
-  &--destination {
-    #{$root}__content {
-      max-width: 750px;
-    }
-    h1 {
-      font-size: clamp(1.875rem, 1.5rem + 1.6667vi, 3rem);
-    }
-  }
-
-  &--destination {
-    h1 {
-      font-size: clamp(1.875rem, 1.6667rem + 2.037vi, 3.5rem);
-    }
-  }
-
-  &--tour {
-    #{$root}__content {
-      max-width: 720px;
-    }
-  }
-
-  &--gallery {
-    #{$root}__content {
-      max-width: 850px;
-    }
-  }
-
   @include media(tablet) {
     &__inner {
       min-height: 450px;
+
+      &::before {
+        background: rgb(57, 66, 100) 98.371%;
+        opacity: 0.6;
+      }
     }
 
-    &__content {
+    &__content,
+    p {
       max-width: 100%;
-      margin-bottom: 0;
     }
+
+    &--services {
+    #{$root}__content {
+      max-width: 100%;
+      translate: none;
+    }
+  }
   }
 
   @include media(mobile-m) {

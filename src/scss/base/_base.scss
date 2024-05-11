@@ -58,11 +58,17 @@ body {
   }
 }
 
-.container {
+.container,
+.wrapper,
+.contacts__wrapper {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   width: 100%;
   max-width: var(--container-width);
+}
+
+.wrapper {
+  max-width: 1122px;
 }
 
 .site-container {
@@ -72,9 +78,11 @@ body {
   min-height: var(--vh);
 }
 
-// .main {
-//   padding-top: var(--header-height);
-// }
+.main {
+  &--top {
+    padding-top: calc(var(--header-height) - 4px);
+  }
+}
 
 .logo {
   display: flex;
@@ -82,12 +90,20 @@ body {
   justify-content: center;
   width: 100%;
   max-width: 243px;
+
+  @include media(tablet) {
+    max-width: 200px;
+  }
 }
 
 .content {
   margin: 0 auto rem(48);
   width: fit-content;
   text-align: center;
+
+  @include media(tablet) {
+    margin-bottom: 30px;
+  }
 }
 
 .image {
@@ -100,5 +116,32 @@ body {
     @include media(mobile-l) {
       aspect-ratio: 16/9;
     }
+  }
+}
+
+.is-scrolling {
+  scrollbar-color: var(--color-blue-300) var(--color-white);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: var(--color-blue-300);
+  }
+
+  @include media(desktop) {
+    overflow-y: scroll;
+    padding: 15px 0;
   }
 }

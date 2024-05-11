@@ -2,7 +2,7 @@
 @use "../../utils/mixins/" as *;
 
 .options {
-  padding-bottom: 57px;
+  padding: rem(58) 0 rem(56);
 
   &__content {
     margin-bottom: 42px;
@@ -94,5 +94,52 @@
   .btn {
     padding: 22px 90px;
     margin-inline: auto;
+  }
+
+  @include media(tablet) {
+    padding: 30px 0;
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      padding: 16px;
+
+      &:last-child {
+        grid-column: 2 span;
+        max-width: 100%;
+
+        .options__desc {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &__content {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      &:last-child {
+        grid-column: auto;
+      }
+    }
+
+    &__desc {
+      max-width: 100%;
+    }
+  }
+
+  @include media(mobile-m) {
+    .btn {
+      max-width: 100%;
+    }
   }
 }
