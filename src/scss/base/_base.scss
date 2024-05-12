@@ -106,20 +106,8 @@ body {
   }
 }
 
-.image {
-  overflow: hidden;
-  border-radius: var(--radius-big);
-
-  img {
-    width: 100%;
-
-    @include media(mobile-l) {
-      aspect-ratio: 16/9;
-    }
-  }
-}
-
 .is-scrolling {
+  overflow: hidden;
   scrollbar-color: var(--color-blue-300) var(--color-white);
   scrollbar-width: thin;
 
@@ -141,7 +129,7 @@ body {
   }
 
   @include media(desktop) {
-    overflow-y: scroll;
+    overflow-x: scroll;
     padding: 15px 0;
   }
 }

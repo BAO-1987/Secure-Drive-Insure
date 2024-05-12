@@ -12,7 +12,6 @@
 
   &__link {
     font-size: clamp(16px, 0.9167rem + 0.3704vi, 20px);
-    line-height: 1.5;
     white-space: nowrap;
     opacity: 0.6;
     transition: opacity 0.3s linear;
@@ -73,11 +72,11 @@
       &::before {
         content: "";
         position: absolute;
-        top: 13px;
         left: 13px;
+        top: 13px;
+        border-radius: 50%;
         width: 4px;
         height: 4px;
-        border-radius: 50%;
         background-color: var(--color-white);
       }
     }
@@ -85,7 +84,7 @@
 
   img {
     overflow: hidden;
-    border-radius: calc(var(--radius-main) + 7px);
+    border-radius: calc(var(--radius-main) + 4px);
     width: 100%;
   }
 

@@ -36,8 +36,8 @@
   img {
     overflow: hidden;
     border-radius: var(--radius-big);
-    border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
     width: 100%;
   }
 
@@ -51,7 +51,6 @@
     }
 
     &__item {
-
       &:last-child {
         grid-column: span 2;
 
@@ -63,6 +62,10 @@
 
     &__desc {
       padding: 16px;
+
+      span {
+        margin-bottom: 16px;
+      }
     }
   }
 
